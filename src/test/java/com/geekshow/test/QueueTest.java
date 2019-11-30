@@ -26,9 +26,11 @@ public class QueueTest {
 	 */
 	@Test
 	public void testInfo() throws Exception{
+		int flag=0;
 		while(true){
-			Thread.sleep(1000);
-			this.sender.sendInfo("Hello RabbitMQ of Info");
+			flag++;
+			Thread.sleep(2000);
+			this.sender.sendInfo("Hello RabbitMQ of Info"+flag);
 		}
 	}
 	
